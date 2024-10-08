@@ -1,97 +1,182 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
- /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-/*
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html, body {
+  width: 1440px; /* Sayfanın genişliği */
+  height: 2000px; /* Sayfanın yüksekliği */
+  margin: 0; /* Varsayılan margin'i sıfırla */
+  overflow: hidden; /* Taşan içerik için kaydırmayı gizle */
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: #141414; /* Sayfa arka plan rengi */
+  color: white; /* Yazı rengi */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+header {
+  background-color: #e50914; /* Kırmızı arka plan */
+  padding: 1rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.color-system {
+  display: block; /* Yeni satıra geçmesi için */
+  
+  font-size: 1.2em; /* Yazı boyutu */
+  color: white; /* Yazı rengi */
+  text-align: left; /* Sola dayalı */
 }
 
-.card {
-  padding: 2em;
+.content-box {
+  display: flex;
+  justify-content: space-between; /* Kutular arasında boşluk bırak */
+
 }
 
-.read-the-docs {
-  color: #888;
-}
-
-button {
+.main-box {
+  background-color: #222; /* Kutuların arka plan rengi */
+  padding: 1em; /* İçerideki boşluk */
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  width: 48%; /* Kutuların genişliği */
+  height: 458px; /* Yükseklik */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.red-box h2 {
+  background-color: red; /* Kırmızı arka plan */
+  color: white; /* Yazı rengi */
+  padding: 0.5em; /* İçerideki boşluk */
+  border-radius: 4px 4px 0 0; /* Üst köşeleri yuvarla */
 }
-*/
+
+.black-box h2 {
+  background-color: black; /* Siyah arka plan */
+  color: white; /* Yazı rengi */
+  padding: 0.5em; /* İçerideki boşluk */
+  border-radius: 4px 4px 0 0; /* Üst köşeleri yuvarla */
+}
+
+.red-content-box {
+  height: 20vh; /* Sayfanın 5'te 1'i yüksekliği */
+  width: 100%; /* Tam genişlik */
+  background-color: darkred; /* Koyu kırmızı arka plan */
+  margin-top: 1em; /* Üstten boşluk */
+  display: flex; /* Flexbox kullanarak içeriği ortala */
+  align-items: center; /* Dikeyde ortala */
+  justify-content: flex-start; /* Sola dayalı yap */
+  padding-left: 10px; /* Soldan biraz boşluk */
+}
+
+.black-content-box {
+  height: 20vh; /* Sayfanın 5'te 1'i yüksekliği */
+  width: 100%; /* Tam genişlik */
+  background-color: black; /* Siyah arka plan */
+  margin-top: 1em; /* Üstten boşluk */
+  display: flex; /* Flexbox kullanarak içeriği ortala */
+  align-items: center; /* Dikeyde ortala */
+  justify-content: flex-start; /* Sola dayalı yap */
+  padding-left: 10px; /* Soldan biraz boşluk */
+}
+
+.red-text, .black-text {
+  color: white; /* Yazı rengi */
+  font-size: 1.5em; /* Yazı boyutu */
+}
+
+.typography-box {
+  height: 288px; /* Belirtilen yükseklik */
+  width: 600px; /* Belirtilen genişlik */
+  
+  background-color: #222; /* Kutu arka plan rengi */
+  border-radius: 8px; /* Kenar yuvarlama */
+  padding: 1em; /* İçerideki boşluk */
+}
+
+.typography-box h3 {
+  margin: 0; /* Başlık için margin sıfırla */
+  text-align: left; /* Sola dayalı yazı */
+}
+
+.color-squares {
+  display: grid; /* Grid sistemi kullan */
+  grid-template-columns: repeat(4, 1fr); /* Dört eşit kare oluştur */
+  gap: 10px; /* Kareler arası boşluk */
+  margin-top: 1em; /* Başlığın altına boşluk */
+}
+
+.square {
+  height: 100%; /* Yüksekliğin tamamı */
+  aspect-ratio: 1; /* Kare şekli */
+  background-color: #444; /* Kareler için arka plan rengi */
+}
+.accent-box {
+  height: 288px; /* Belirtilen yükseklik */
+  width: 500px; /* Belirtilen genişlik */
+
+  background-color: #222; /* Kutu arka plan rengi */
+  border-radius: 8px; /* Kenar yuvarlama */
+  padding: 1em; /* İçerideki boşluk */
+  display: flex;
+  flex-direction: column; /* Dikey yönde yerleştir */
+}
+
+.accent-box h3 {
+  margin: 0; /* Başlık için margin sıfırla */
+  text-align: left; /* Sola dayalı yazı */
+}
+
+.accent-squares {
+  display: flex; /* Flexbox kullan */
+  justify-content: space-between; /* Kutular arasında boşluk bırak */
+  margin-top: 1em; /* Başlığın altına boşluk */
+  flex: 1; /* Bu alan kalan boşluğu kaplasın */
+}
+
+.accent-square {
+  flex: 1; /* Kutular eşit genişlikte olsun */
+  height: 100%; /* Yüksekliğin tamamı */
+  margin: 0 5px; /* Soldan ve sağdan boşluk */
+}
+
+/* Accent kutusundaki karelerin renkleri */
+.accent-square:nth-child(1) {
+  background-color: blue; /* İlk kutu mavi */
+}
+
+.accent-square:nth-child(2) {
+  background-color: orange; /* İkinci kutu turuncu */
+}
+
+.accent-square:nth-child(3) {
+  background-color: green; /* Üçüncü kutu yeşil */
+}
+.final-box {
+  height: 288px; /* Toplam yükseklik */
+  width: 600px; /* Genişlik */
+  background-color: #333; /* Arka plan rengi */
+
+  border-radius: 8px; /* Kenar yuvarlama */
+  display: flex; /* Flexbox kullan */
+  flex-direction: column; /* Dikey yönde yerleştir */
+}
+
+.final-box .top {
+  height: 50%; /* Üst kısım için %50 yükseklik */
+  background-color: #444; /* Üst kısmın arka plan rengi */
+  color: white; /* Yazı rengi */
+  display: flex; /* İçerik ortalama için */
+  align-items: center; /* Dikeyde ortala */
+  justify-content: center; /* Yatayda ortala */
+  font-size: 1.5em; /* Yazı boyutu */
+}
+
+.final-box .bottom {
+  display: flex; /* Alt kısımda flexbox kullan */
+  justify-content: space-between; /* Kutular arasında boşluk bırak */
+  gap: 10px; /* Kutular arası boşluk */
+  flex: 1; /* Kalan alanı kapla */
+}
+
+.final-box .bottom .small-box {
+  flex: 1; /* Eşit genişlikte kutular */
+  height: 100%; /* Yükseklik */
+  background-color: #555; /* Alt kutuların arka plan rengi */
+  border-radius: 4px; /* Kenar yuvarlama */
+}
